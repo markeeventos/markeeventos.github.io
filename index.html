@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MARKE | Live Marketing & Experiences</title>
+  <title>MARKE CASTING | Pessoas que fazem acontecer</title>
 
-  <meta name="description" content="MARKE — Live Marketing & Experiences. Estratégia, produção, coordenação e experiências que conectam marcas e pessoas.">
+  <meta name="description" content="MARKE CASTING — casting e coordenação de profissionais para eventos, ativações e experiências de marca.">
 
   <style>
     * {
@@ -20,354 +20,407 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-      background: #ffffff;
-      color: #111111;
-      line-height: 1.5;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1120px, 90%);
-      margin: 0 auto;
+    :root {
+      --gold: #c8a45d;
+      --gold-light: #e2c98f;
+      --black: #0b0b0b;
+      --white: #ffffff;
+      --gray: #a7a7a7;
+      --dark-gray: #171717;
     }
 
     /* HEADER */
 
     header {
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid #eeeeee;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 24px 6%;
+      background: rgba(11, 11, 11, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(200, 164, 93, 0.15);
     }
 
     .nav {
-      height: 76px;
+      max-width: 1200px;
+      margin: auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      font-size: 25px;
+      font-size: 28px;
       font-weight: 800;
       letter-spacing: -1.5px;
+      color: #fff;
     }
 
     .logo span {
-      font-weight: 400;
-    }
-
-    nav {
-      display: flex;
-      gap: 30px;
-      align-items: center;
+      color: var(--gold);
     }
 
     nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 28px;
       font-size: 14px;
-      color: #555555;
-      transition: 0.2s;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      color: #111111;
-    }
-
-    .nav-button {
-      border: 1px solid #111111;
-      padding: 10px 18px;
-      border-radius: 30px;
-      color: #111111;
+      color: var(--gold);
     }
 
     /* HERO */
 
     .hero {
-      min-height: 720px;
+      min-height: 100vh;
       display: flex;
       align-items: center;
-      border-bottom: 1px solid #eeeeee;
+      padding: 150px 7% 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: rgba(200, 164, 93, 0.08);
+      border-radius: 50%;
+      filter: blur(80px);
+      top: 10%;
+      right: -150px;
     }
 
     .hero-content {
-      max-width: 900px;
+      max-width: 1100px;
+      margin: auto;
+      width: 100%;
+      position: relative;
+      z-index: 2;
     }
 
     .eyebrow {
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #777777;
-      margin-bottom: 25px;
+      color: var(--gold);
+      font-size: 13px;
       font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
     }
 
     h1 {
-      font-size: clamp(52px, 8vw, 100px);
-      line-height: 0.94;
+      font-size: clamp(58px, 10vw, 125px);
+      line-height: 0.9;
       letter-spacing: -6px;
-      font-weight: 700;
+      max-width: 900px;
       margin-bottom: 35px;
     }
 
-    h1 span {
-      color: #777777;
+    h1 .gold {
+      color: var(--gold);
     }
 
     .hero-text {
-      max-width: 620px;
+      max-width: 650px;
+      color: #bdbdbd;
       font-size: 20px;
-      color: #555555;
-      margin-bottom: 40px;
+      line-height: 1.7;
+      margin-bottom: 42px;
     }
 
     .buttons {
       display: flex;
-      gap: 14px;
+      gap: 15px;
       flex-wrap: wrap;
     }
 
-    .button {
+    .btn {
       display: inline-block;
-      padding: 15px 24px;
-      border-radius: 40px;
-      font-size: 14px;
+      padding: 16px 30px;
+      border-radius: 50px;
+      text-decoration: none;
       font-weight: 600;
-      transition: 0.25s;
+      transition: 0.3s;
     }
 
-    .button-primary {
-      background: #111111;
-      color: #ffffff;
+    .btn-gold {
+      background: var(--gold);
+      color: #0b0b0b;
     }
 
-    .button-primary:hover {
+    .btn-gold:hover {
+      background: var(--gold-light);
       transform: translateY(-2px);
     }
 
-    .button-secondary {
-      border: 1px solid #dddddd;
-      color: #111111;
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
     }
 
     /* SECTIONS */
 
     section {
-      padding: 120px 0;
-      border-bottom: 1px solid #eeeeee;
+      padding: 110px 7%;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: auto;
     }
 
     .section-label {
+      color: var(--gold);
       font-size: 12px;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #888888;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       font-weight: 600;
     }
 
-    .section-title {
-      font-size: clamp(38px, 5vw, 64px);
-      letter-spacing: -3px;
+    h2 {
+      font-size: clamp(38px, 6vw, 70px);
       line-height: 1;
-      max-width: 800px;
-      margin-bottom: 60px;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .intro {
+      color: var(--gray);
+      font-size: 18px;
+      max-width: 700px;
     }
 
     /* SERVICES */
 
     .services {
+      background: #111111;
+    }
+
+    .cards {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: #dddddd;
-      border: 1px solid #dddddd;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 55px;
     }
 
-    .service {
-      background: #ffffff;
-      padding: 45px;
+    .card {
+      background: #181818;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 38px 30px;
       min-height: 250px;
+      transition: 0.3s;
     }
 
-    .service-number {
-      font-size: 12px;
-      color: #999999;
-      margin-bottom: 50px;
+    .card:hover {
+      border-color: rgba(200,164,93,0.5);
+      transform: translateY(-5px);
     }
 
-    .service h3 {
-      font-size: 25px;
-      margin-bottom: 12px;
-      letter-spacing: -0.8px;
+    .number {
+      color: var(--gold);
+      font-size: 13px;
+      margin-bottom: 35px;
     }
 
-    .service p {
-      color: #666666;
-      max-width: 400px;
+    .card h3 {
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #999;
+      font-size: 15px;
+    }
+
+    /* CASTING */
+
+    .casting-box {
+      margin-top: 55px;
+      border-top: 1px solid rgba(200,164,93,0.35);
+      border-bottom: 1px solid rgba(200,164,93,0.35);
+      padding: 45px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .casting-box h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .casting-box p {
+      color: var(--gray);
+    }
+
+    .casting-list {
+      list-style: none;
+    }
+
+    .casting-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: #ddd;
+    }
+
+    .casting-list li::before {
+      content: "✦";
+      color: var(--gold);
+      margin-right: 12px;
     }
 
     /* ABOUT */
 
     .about {
+      background: #f5f3ee;
+      color: #111;
+    }
+
+    .about .section-label {
+      color: #9b7a39;
+    }
+
+    .about .intro {
+      color: #555;
+    }
+
+    .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 100px;
-      align-items: start;
+      gap: 70px;
+      align-items: center;
     }
 
-    .about h3 {
-      font-size: 34px;
-      letter-spacing: -1.5px;
-      line-height: 1.15;
+    .about-highlight {
+      font-size: clamp(32px, 5vw, 55px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      font-weight: 700;
     }
 
-    .about p {
-      color: #666666;
-      font-size: 17px;
-      margin-bottom: 20px;
+    .about-highlight span {
+      color: #a5823d;
     }
 
-    /* PROCESS */
+    /* CONTACT */
 
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-    }
-
-    .process-item {
-      border-top: 1px solid #111111;
-      padding-top: 20px;
-    }
-
-    .process-number {
-      color: #999999;
-      font-size: 13px;
-      margin-bottom: 40px;
-    }
-
-    .process h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .process p {
-      color: #666666;
-      font-size: 14px;
-    }
-
-    /* CTA */
-
-    .cta {
-      background: #111111;
-      color: #ffffff;
+    .contact {
       text-align: center;
-      border: none;
+      background: #0b0b0b;
     }
 
-    .cta .section-label {
-      color: #999999;
-    }
-
-    .cta h2 {
-      font-size: clamp(42px, 6vw, 76px);
-      letter-spacing: -4px;
-      line-height: 0.98;
+    .contact h2 {
       max-width: 800px;
+      margin: 0 auto 25px;
+    }
+
+    .contact p {
+      color: var(--gray);
+      max-width: 600px;
       margin: 0 auto 35px;
     }
 
-    .cta p {
-      color: #aaaaaa;
-      max-width: 550px;
-      margin: 0 auto 35px;
+    .whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: #0b0b0b;
+      padding: 17px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
     }
 
-    .cta .button-primary {
-      background: #ffffff;
-      color: #111111;
+    .whatsapp:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
     }
 
     /* FOOTER */
 
     footer {
-      padding: 40px 0;
-      background: #111111;
-      color: #777777;
-      border-top: 1px solid #222222;
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 7%;
+      color: #777;
       font-size: 13px;
+      text-align: center;
     }
 
-    .footer-logo {
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 18px;
+    footer strong {
+      color: var(--gold);
     }
 
     /* MOBILE */
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
+
+      header {
+        padding: 20px 6%;
+      }
 
       nav {
         display: none;
       }
 
       .hero {
-        min-height: 650px;
+        padding: 140px 7% 90px;
+        min-height: 90vh;
       }
 
       h1 {
+        font-size: clamp(58px, 17vw, 90px);
         letter-spacing: -4px;
       }
 
       .hero-text {
-        font-size: 18px;
+        font-size: 17px;
       }
 
       section {
-        padding: 80px 0;
+        padding: 80px 7%;
       }
 
-      .services {
+      .cards {
         grid-template-columns: 1fr;
       }
 
-      .service {
-        min-height: auto;
-        padding: 32px;
+      .casting-box {
+        grid-template-columns: 1fr;
+        gap: 35px;
       }
 
-      .about {
+      .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
       }
 
-      .process {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .section-title {
-        margin-bottom: 40px;
-      }
-
-      .footer-content {
+      .buttons {
         flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        text-align: center;
       }
     }
   </style>
@@ -375,227 +428,262 @@
 
 <body>
 
+  <!-- HEADER -->
+
   <header>
-    <div class="container nav">
-      <a href="#" class="logo">MARKE<span>.</span></a>
+    <div class="nav">
+      <div class="logo">MARKE<span>.</span></div>
 
       <nav>
-        <a href="#sobre">Sobre</a>
+        <a href="#casting">Casting</a>
         <a href="#servicos">Serviços</a>
-        <a href="#processo">Processo</a>
-        <a href="#contato" class="nav-button">Fale com a Marke</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
       </nav>
     </div>
   </header>
 
 
+  <!-- HERO -->
+
   <main>
 
-    <!-- HERO -->
-
     <section class="hero">
-      <div class="container">
-        <div class="hero-content">
 
-          <div class="eyebrow">
-            Live Marketing & Experiences
-          </div>
+      <div class="hero-content">
 
-          <h1>
-            Marcas que<br>
-            <span>acontecem.</span>
-          </h1>
+        <div class="eyebrow">
+          MARKE CASTING
+        </div>
 
-          <p class="hero-text">
-            Planejamento, produção e coordenação de experiências
-            que transformam ideias em momentos reais de conexão
-            entre marcas e pessoas.
-          </p>
+        <h1>
+          Pessoas que<br>
+          <span class="gold">fazem acontecer.</span>
+        </h1>
 
-          <div class="buttons">
-            <a href="#contato" class="button button-primary">
-              Vamos conversar
-            </a>
+        <p class="hero-text">
+          Casting e coordenação de profissionais para eventos,
+          ativações e experiências de marca que precisam de
+          pessoas preparadas para representar, conectar e entregar.
+        </p>
 
-            <a href="#servicos" class="button button-secondary">
-              Conheça a Marke
-            </a>
-          </div>
+        <div class="buttons">
+
+          <a
+            class="btn btn-gold"
+            href="https://wa.me/5519982083109"
+            target="_blank"
+          >
+            Falar pelo WhatsApp
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="#casting"
+          >
+            Conheça a Marke Casting
+          </a>
 
         </div>
+
       </div>
+
     </section>
 
 
-    <!-- SOBRE -->
+    <!-- CASTING -->
 
-    <section id="sobre">
-      <div class="container">
+    <section id="casting">
+
+      <div class="section-inner">
 
         <div class="section-label">
-          01 — Sobre
+          MARKE CASTING
         </div>
 
-        <div class="about">
+        <h2>
+          O profissional certo<br>
+          para cada experiência.
+        </h2>
 
-          <h3>
-            Estratégia no planejamento.
-            Precisão na execução.
-            Presença em cada detalhe.
-          </h3>
+        <p class="intro">
+          Conectamos marcas, agências e eventos a profissionais
+          selecionados de acordo com o perfil, objetivo e dinâmica
+          de cada projeto.
+        </p>
+
+        <div class="casting-box">
 
           <div>
-            <p>
-              A MARKE atua na construção e execução de experiências
-              de marca, conectando estratégia, produção e operação.
-            </p>
+            <h3>Nosso casting</h3>
 
             <p>
-              Do planejamento ao evento acontecendo, cuidamos dos
-              detalhes para que cada experiência tenha propósito,
-              consistência e resultado.
+              Uma base de profissionais para diferentes formatos
+              de eventos, ativações e ações promocionais.
             </p>
           </div>
+
+          <ul class="casting-list">
+
+            <li>Promotores e promotoras</li>
+            <li>Recepcionistas</li>
+            <li>Modelos e modelos comerciais</li>
+            <li>Staff para eventos</li>
+            <li>Profissionais para ativações</li>
+            <li>Equipe para ações corporativas</li>
+
+          </ul>
 
         </div>
 
       </div>
+
     </section>
 
 
     <!-- SERVIÇOS -->
 
-    <section id="servicos">
-      <div class="container">
+    <section id="servicos" class="services">
+
+      <div class="section-inner">
 
         <div class="section-label">
-          02 — Serviços
+          O que fazemos
         </div>
 
-        <h2 class="section-title">
-          Do conceito ao último detalhe.
+        <h2>
+          Casting com<br>
+          estratégia.
         </h2>
 
-        <div class="services">
+        <p class="intro">
+          Mais do que encontrar pessoas, cuidamos para que cada
+          profissional esteja alinhado à experiência que a marca
+          quer entregar.
+        </p>
 
-          <div class="service">
-            <div class="service-number">01</div>
-            <h3>Produção Executiva</h3>
+        <div class="cards">
+
+          <div class="card">
+
+            <div class="number">01</div>
+
+            <h3>Seleção</h3>
+
             <p>
-              Planejamento, organização e acompanhamento de
-              projetos e eventos do início ao fim.
+              Curadoria de profissionais de acordo com perfil,
+              experiência, comunicação e necessidade do projeto.
             </p>
+
           </div>
 
-          <div class="service">
-            <div class="service-number">02</div>
-            <h3>Produção de Campo</h3>
-            <p>
-              Presença operacional, acompanhamento de montagem,
-              equipes, fornecedores e execução no local.
-            </p>
-          </div>
 
-          <div class="service">
-            <div class="service-number">03</div>
+          <div class="card">
+
+            <div class="number">02</div>
+
             <h3>Coordenação</h3>
+
             <p>
-              Gestão de equipes e operação para garantir fluidez,
-              organização e excelência durante a experiência.
+              Organização das equipes e acompanhamento para que
+              a operação aconteça de forma alinhada.
             </p>
+
           </div>
 
-          <div class="service">
-            <div class="service-number">04</div>
-            <h3>Live Marketing</h3>
+
+          <div class="card">
+
+            <div class="number">03</div>
+
+            <h3>Experiência</h3>
+
             <p>
-              Ativações, experiências e ações que aproximam marcas
-              das pessoas de forma relevante e memorável.
+              Profissionais preparados para representar marcas
+              e criar conexões reais com o público.
             </p>
+
           </div>
 
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- PROCESSO -->
+    <!-- SOBRE -->
 
-    <section id="processo">
-      <div class="container">
+    <section id="sobre" class="about">
 
-        <div class="section-label">
-          03 — Processo
-        </div>
+      <div class="section-inner">
 
-        <h2 class="section-title">
-          Pensar. Planejar. Executar. Entregar.
-        </h2>
+        <div class="about-grid">
 
-        <div class="process">
+          <div>
 
-          <div class="process-item">
-            <div class="process-number">01</div>
-            <h3>Entender</h3>
-            <p>
-              Imersão no objetivo, público e contexto da marca.
+            <div class="section-label">
+              Sobre a Marke
+            </div>
+
+            <p class="about-highlight">
+              Estratégia por trás das
+              <span>pessoas.</span>
             </p>
+
           </div>
 
-          <div class="process-item">
-            <div class="process-number">02</div>
-            <h3>Planejar</h3>
-            <p>
-              Organização de pessoas, processos, prazos e recursos.
-            </p>
-          </div>
+          <div>
 
-          <div class="process-item">
-            <div class="process-number">03</div>
-            <h3>Executar</h3>
-            <p>
-              Operação próxima e acompanhamento de cada detalhe.
+            <p class="intro">
+              A MARKE nasceu para aproximar marcas e pessoas
+              através de experiências bem planejadas e profissionais
+              preparados para fazer parte delas.
             </p>
-          </div>
 
-          <div class="process-item">
-            <div class="process-number">04</div>
-            <h3>Entregar</h3>
-            <p>
-              Experiências consistentes, organizadas e com resultado.
+            <br>
+
+            <p class="intro">
+              Atuamos com casting e coordenação, conectando
+              profissionais às necessidades de cada evento,
+              ativação ou experiência.
             </p>
+
           </div>
 
         </div>
 
       </div>
+
     </section>
 
 
     <!-- CONTATO -->
 
-    <section id="contato" class="cta">
+    <section id="contato" class="contact">
 
-      <div class="container">
+      <div class="section-inner">
 
         <div class="section-label">
-          04 — Contato
+          Vamos conversar
         </div>
 
         <h2>
-          Sua próxima experiência começa aqui.
+          Seu próximo projeto<br>
+          começa com as pessoas certas.
         </h2>
 
         <p>
-          Tem um projeto, evento ou ativação para colocar em prática?
-          Vamos conversar sobre como a MARKE pode fazer acontecer.
+          Conte para a gente sobre o seu evento, ativação ou projeto.
+          A MARKE encontra a equipe que combina com a sua experiência.
         </p>
 
         <a
-          href="mailto:contato@marke.com.br"
-          class="button button-primary">
-          Entrar em contato
+          class="whatsapp"
+          href="https://wa.me/5519982083109"
+          target="_blank"
+        >
+          WhatsApp · (19) 98208-3109
         </a>
 
       </div>
@@ -605,22 +693,10 @@
   </main>
 
 
+  <!-- FOOTER -->
+
   <footer>
-    <div class="container footer-content">
-
-      <div class="footer-logo">
-        MARKE.
-      </div>
-
-      <div>
-        Live Marketing & Experiences
-      </div>
-
-      <div>
-        © 2026 MARKE
-      </div>
-
-    </div>
+    © 2026 <strong>MARKE CASTING</strong> · Todos os direitos reservados.
   </footer>
 
 </body>
