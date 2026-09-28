@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MARKE | Live Marketing & Experiences</title>
+
+  <meta name="description" content="MARKE — Live Marketing & Experiences. Estratégia, produção, coordenação e experiências que conectam marcas e pessoas.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #111111;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+    }
+
+    .logo span {
+      font-weight: 400;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #555555;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #111111;
+    }
+
+    .nav-button {
+      border: 1px solid #111111;
+      padding: 10px 18px;
+      border-radius: 30px;
+      color: #111111;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #777777;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(52px, 8vw, 100px);
+      line-height: 0.94;
+      letter-spacing: -6px;
+      font-weight: 700;
+      margin-bottom: 35px;
+    }
+
+    h1 span {
+      color: #777777;
+    }
+
+    .hero-text {
+      max-width: 620px;
+      font-size: 20px;
+      color: #555555;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+
+    .button-primary {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      border: 1px solid #dddddd;
+      color: #111111;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 120px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .section-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #888888;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: clamp(38px, 5vw, 64px);
+      letter-spacing: -3px;
+      line-height: 1;
+      max-width: 800px;
+      margin-bottom: 60px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: #dddddd;
+      border: 1px solid #dddddd;
+    }
+
+    .service {
+      background: #ffffff;
+      padding: 45px;
+      min-height: 250px;
+    }
+
+    .service-number {
+      font-size: 12px;
+      color: #999999;
+      margin-bottom: 50px;
+    }
+
+    .service h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+      letter-spacing: -0.8px;
+    }
+
+    .service p {
+      color: #666666;
+      max-width: 400px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .about h3 {
+      font-size: 34px;
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+    }
+
+    .about p {
+      color: #666666;
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    /* PROCESS */
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .process-item {
+      border-top: 1px solid #111111;
+      padding-top: 20px;
+    }
+
+    .process-number {
+      color: #999999;
+      font-size: 13px;
+      margin-bottom: 40px;
+    }
+
+    .process h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .process p {
+      color: #666666;
+      font-size: 14px;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: #111111;
+      color: #ffffff;
+      text-align: center;
+      border: none;
+    }
+
+    .cta .section-label {
+      color: #999999;
+    }
+
+    .cta h2 {
+      font-size: clamp(42px, 6vw, 76px);
+      letter-spacing: -4px;
+      line-height: 0.98;
+      max-width: 800px;
+      margin: 0 auto 35px;
+    }
+
+    .cta p {
+      color: #aaaaaa;
+      max-width: 550px;
+      margin: 0 auto 35px;
+    }
+
+    .cta .button-primary {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 40px 0;
+      background: #111111;
+      color: #777777;
+      border-top: 1px solid #222222;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .footer-logo {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      h1 {
+        letter-spacing: -4px;
+      }
+
+      .hero-text {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .service {
+        min-height: auto;
+        padding: 32px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .process {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .section-title {
+        margin-bottom: 40px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">MARKE<span>.</span></a>
+
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato" class="nav-button">Fale com a Marke</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Live Marketing & Experiences
+          </div>
+
+          <h1>
+            Marcas que<br>
+            <span>acontecem.</span>
+          </h1>
+
+          <p class="hero-text">
+            Planejamento, produção e coordenação de experiências
+            que transformam ideias em momentos reais de conexão
+            entre marcas e pessoas.
+          </p>
+
+          <div class="buttons">
+            <a href="#contato" class="button button-primary">
+              Vamos conversar
+            </a>
+
+            <a href="#servicos" class="button button-secondary">
+              Conheça a Marke
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section id="sobre">
+      <div class="container">
+
+        <div class="section-label">
+          01 — Sobre
+        </div>
+
+        <div class="about">
+
+          <h3>
+            Estratégia no planejamento.
+            Precisão na execução.
+            Presença em cada detalhe.
+          </h3>
+
+          <div>
+            <p>
+              A MARKE atua na construção e execução de experiências
+              de marca, conectando estratégia, produção e operação.
+            </p>
+
+            <p>
+              Do planejamento ao evento acontecendo, cuidamos dos
+              detalhes para que cada experiência tenha propósito,
+              consistência e resultado.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SERVIÇOS -->
+
+    <section id="servicos">
+      <div class="container">
+
+        <div class="section-label">
+          02 — Serviços
+        </div>
+
+        <h2 class="section-title">
+          Do conceito ao último detalhe.
+        </h2>
+
+        <div class="services">
+
+          <div class="service">
+            <div class="service-number">01</div>
+            <h3>Produção Executiva</h3>
+            <p>
+              Planejamento, organização e acompanhamento de
+              projetos e eventos do início ao fim.
+            </p>
+          </div>
+
+          <div class="service">
+            <div class="service-number">02</div>
+            <h3>Produção de Campo</h3>
+            <p>
+              Presença operacional, acompanhamento de montagem,
+              equipes, fornecedores e execução no local.
+            </p>
+          </div>
+
+          <div class="service">
+            <div class="service-number">03</div>
+            <h3>Coordenação</h3>
+            <p>
+              Gestão de equipes e operação para garantir fluidez,
+              organização e excelência durante a experiência.
+            </p>
+          </div>
+
+          <div class="service">
+            <div class="service-number">04</div>
+            <h3>Live Marketing</h3>
+            <p>
+              Ativações, experiências e ações que aproximam marcas
+              das pessoas de forma relevante e memorável.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROCESSO -->
+
+    <section id="processo">
+      <div class="container">
+
+        <div class="section-label">
+          03 — Processo
+        </div>
+
+        <h2 class="section-title">
+          Pensar. Planejar. Executar. Entregar.
+        </h2>
+
+        <div class="process">
+
+          <div class="process-item">
+            <div class="process-number">01</div>
+            <h3>Entender</h3>
+            <p>
+              Imersão no objetivo, público e contexto da marca.
+            </p>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">02</div>
+            <h3>Planejar</h3>
+            <p>
+              Organização de pessoas, processos, prazos e recursos.
+            </p>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">03</div>
+            <h3>Executar</h3>
+            <p>
+              Operação próxima e acompanhamento de cada detalhe.
+            </p>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">04</div>
+            <h3>Entregar</h3>
+            <p>
+              Experiências consistentes, organizadas e com resultado.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section id="contato" class="cta">
+
+      <div class="container">
+
+        <div class="section-label">
+          04 — Contato
+        </div>
+
+        <h2>
+          Sua próxima experiência começa aqui.
+        </h2>
+
+        <p>
+          Tem um projeto, evento ou ativação para colocar em prática?
+          Vamos conversar sobre como a MARKE pode fazer acontecer.
+        </p>
+
+        <a
+          href="mailto:contato@marke.com.br"
+          class="button button-primary">
+          Entrar em contato
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div class="container footer-content">
+
+      <div class="footer-logo">
+        MARKE.
+      </div>
+
+      <div>
+        Live Marketing & Experiences
+      </div>
+
+      <div>
+        © 2026 MARKE
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
